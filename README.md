@@ -5,6 +5,12 @@
   Nature of Code
 </h1>
 
+<p align="center">
+  <a href="https://www.codefactor.io/repository/github/henry-ns/nature-of-code" alt="CodeFactor">
+    <img src="https://www.codefactor.io/repository/github/henry-ns/nature-of-code/badge" />
+  </a>
+</p>
+
 ## :clipboard: Description
 Repository for learning about the nature of code.
 
