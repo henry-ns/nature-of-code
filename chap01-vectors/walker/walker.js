@@ -2,22 +2,31 @@ class Walker {
   constructor(x, y) {
     this.position = createVector(x, y);
     this.velocity = p5.Vector.random2D();
+
+    this.prev = this.position.copy();
   }
 
-  update() {
-    this.position.add(this.velocity);
+  walk() {
+    this.prev.set(this.position);
 
     this.velocity = p5.Vector.random2D();
-    this.velocity.mult(random(5, 10));
+    if (0.5 > random(100)) {
+      this.velocity.mult(random(25, 80));
+    } else {
+      this.velocity.mult(random(3));
+    }
+
+    this.position.add(this.velocity);
   }
 
   show() {
-    stroke(255, 100);
+    stroke(255, 150);
+    stroke(255);
     strokeWeight(2);
 
-    const {x, y} = this.position;
+    const { x, y } = this.position;
 
-    fill(255, 100);
-    ellipse(x, y, 32);
+    line(x, y, this.prev.x, this.prev.y);
+    point(x, y);
   }
 }

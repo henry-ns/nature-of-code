@@ -9,6 +9,6 @@ function setup() {
 function draw() {
   translate(width / 2, height / 2);
   
-  walker.update();
+  walker.walk();
   walker.show();
 }

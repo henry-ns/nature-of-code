@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
   background(0);
-
+  
   mover.update();
   mover.show();
 }
