@@ -5,7 +5,7 @@ class Ball {
     this.velocity = createVector(0, 0);
 
     this.mass = mass;
-    this.radius = sqrt(mass/PI) * 25;
+    this.radius = sqrt(mass / PI) * 25;
   }
 
   edges() {
@@ -19,7 +19,9 @@ class Ball {
     if (x >= width - this.radius) {
       this.position.x = width - this.radius;
       this.velocity.x *= -1;
-    } else if (x <= this.radius) {
+    } 
+    
+    if (x <= this.radius) {
       this.position.x = this.radius;
       this.velocity.x *= -1;
     }
