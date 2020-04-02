@@ -27,12 +27,29 @@ class Ball {
     }
   }
 
+  friction() {
+    const diff = height - (this.position.y + this.radius);
+    
+    if(diff < 1) {
+      const u = 0.1;
+      const normal = this.mass * 0.1;
+
+      const friction = this.velocity.copy();
+
+      friction.normalize();
+      friction.mult(-1 * u * normal);
+
+      this.applyForce(friction);
+    }
+  }
+
   applyForce(force) {
     const acc = p5.Vector.div(force, this.mass);
     this.acceleration.add(acc);
   }
 
   update() {
+    this.friction();
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
     this.acceleration.set(0, 0);

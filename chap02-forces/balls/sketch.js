@@ -5,8 +5,8 @@ function setup() {
 
   const y = height / 2;
 
-  const ballA = new Ball({ y, x: 200, mass: 1 });
-  const ballB = new Ball({ y, x: 400, mass: 5 });
+  const ballA = new Ball({ y, x: 200, mass: 3 });
+  const ballB = new Ball({ y, x: 400, mass: 10 });
 
   balls.push(ballA, ballB);
 }
