@@ -43,12 +43,27 @@ class Ball {
     }
   }
 
+  drag() {
+    const drag = this.velocity.copy();
+
+    drag.normalize();
+    drag.mult(-1/2);
+
+    const c = 0.1;
+    const speed = this.velocity.magSq();
+
+    drag.mult(c * speed);
+
+    this.applyForce(drag);
+  }
+
   applyForce(force) {
     const acc = p5.Vector.div(force, this.mass);
     this.acceleration.add(acc);
   }
 
   update() {
+    this.drag();
     this.friction();
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
