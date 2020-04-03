@@ -9,6 +9,37 @@ This chapter is about vector and your attributes. The vector spoken here is a **
 </p>
 
 ## Operations
+In `p5.js` we can work with various vectors operations.
+
+<p align="center">
+  <img alt="Icon" src="../assets/chapter-01/operations.gif" width="250"/>
+</p>
+
+- Addition of vectos
+
+```js
+  vectorA.add(vectorB);
+
+  // without changing the vectorA
+  const vectorC = p5.Vector.add(vectorA, vectorB);
+```
+
+- Subtraction of vectors
+
+```js
+  vectorA.sub(vectorB);
+
+  // without changing the vectorA
+  const vectorC = p5.Vector.sub(vectorA, vectorB);
+```
+
+- Scale the vector by one value
+
+```js
+  vectorA.mult(5);
+```
+
+:bulb: **For more information, access the [documentation](https://p5js.org/reference/#/p5.Vector).**
 
 ## Example 1 - [Star](./star)
 `p5.js` provide a static method to generate 2D vectors with the same magnitude unitary(equal to one) but with random direction. We can see below.
@@ -36,7 +67,7 @@ That is because is are unit vectors, the magnitude is one. What happens if scale
   vetor.mult(100);
 ```
 
-The result is... one star :sparkles: but uniform
+The result is... one uniform star :sparkles: 
 
 <p align="center">
   <img alt="Icon" src="../assets/chapter-01/star2.gif" width="250"/>

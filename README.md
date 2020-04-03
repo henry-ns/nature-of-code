@@ -24,4 +24,4 @@ All example use the p5.js library, know more at [p5js.org](https://p5js.org).
 
 ## :page_facing_up: Chapters
 
-- [**Chapter 01 - Vector**](./chap01-vectors)
+- [**Chapter 01 - Vectors**](./chap01-vectors)
